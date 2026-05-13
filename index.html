@@ -633,6 +633,12 @@
         }, 150);
       });
     });
+
+    // Force heading sizes (inline styles always win over Tailwind preflight)
+    document.querySelectorAll("h1").forEach(el => { el.style.setProperty("font-size", "clamp(2rem, 5vw, 3.75rem)", "important"); el.style.setProperty("font-weight", "400", "important"); el.style.setProperty("line-height", "1.15", "important"); });
+    document.querySelectorAll("h2").forEach(el => { el.style.setProperty("font-size", "clamp(1.625rem, 3.5vw, 2.5rem)", "important"); el.style.setProperty("font-weight", "400", "important"); el.style.setProperty("line-height", "1.15", "important"); });
+    document.querySelectorAll("h3").forEach(el => { el.style.setProperty("font-size", "clamp(1.25rem, 2vw, 1.5rem)", "important"); el.style.setProperty("font-weight", "400", "important"); el.style.setProperty("line-height", "1.15", "important"); });
+    document.querySelectorAll("h4").forEach(el => { el.style.setProperty("font-size", "1.125rem", "important"); el.style.setProperty("font-weight", "500", "important"); });
   </script>
 
 </body>
